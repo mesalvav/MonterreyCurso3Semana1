@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    
+    //Su programa deberá sustituir el último código de la URL anterior (en este caso 978-84-376-0494-7 ) por lo que se ponga en la caja de texto
     func sincrono(ISBN: String) -> NSString? {
        // let urlstr = "http://dia.ccm.itesm.mx"
         let urlstr = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:" + ISBN
