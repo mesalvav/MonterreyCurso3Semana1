@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Request" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-9A-1eL">
+                                <rect key="frame" x="174" y="28" width="252" height="421"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escriba ISBN  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="god-Is-Zvf">
+                                        <rect key="frame" x="72" y="0.0" width="108" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN aqui" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-tM-lgk">
+                                        <rect key="frame" x="0.0" y="21" width="252" height="30"/>
+                                        <color key="backgroundColor" white="0.92105263157894735" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Resultado Aqui" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sBL-69-QeX">
+                                        <rect key="frame" x="0.0" y="51" width="252" height="370"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3ZZ-tM-lgk" firstAttribute="leading" secondItem="sBL-69-QeX" secondAttribute="leading" id="6kT-RZ-IUR"/>
+                                    <constraint firstItem="god-Is-Zvf" firstAttribute="leading" secondItem="6MI-9A-1eL" secondAttribute="leading" constant="72" id="Ea1-U9-9DZ"/>
+                                    <constraint firstItem="3ZZ-tM-lgk" firstAttribute="leading" secondItem="6MI-9A-1eL" secondAttribute="leading" id="ont-h7-iyo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6MI-9A-1eL" secondAttribute="bottom" constant="151" id="5iV-Kb-cfM"/>
+                            <constraint firstItem="6MI-9A-1eL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEU-Mx-dEI"/>
+                            <constraint firstItem="6MI-9A-1eL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="buP-vu-JdY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ISBNtextField" destination="3ZZ-tM-lgk" id="ndW-de-AxZ"/>
+                        <outlet property="resultadoTextView" destination="sBL-69-QeX" id="lLs-BU-EAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="349"/>
+        </scene>
+    </scenes>
+</document>
